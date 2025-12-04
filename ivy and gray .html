@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ivy & Gray Birthday Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    .side {
+      flex: 1 1 50%;
+      min-width: 280px;
+      padding: 20px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Gray – car theme */
+    .side-gray {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e5e7eb;
+      border-right: 3px solid #e5e7eb;
+    }
+
+    .side-gray h1 {
+      font-size: 28px;
+      color: #f97316;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 6px;
+    }
+
+    .side-gray h2 {
+      font-size: 20px;
+      color: #bfdbfe;
+      margin-bottom: 14px;
+    }
+
+    .side-gray p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .car-tagline {
+      font-size: 15px;
+      font-weight: 600;
+      color: #facc15;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(15,23,42,0.85);
+      border-radius: 999px;
+      border: 2px solid #f97316;
+      padding: 6px 14px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .car-photo-frame {
+      margin-top: 12px;
+      border-radius: 14px;
+      border: 3px dashed #f97316;
+      padding: 6px;
+      background: rgba(15,23,42,0.9);
+    }
+
+    .car-photo-frame-inner {
+      border-radius: 10px;
+      overflow: hidden;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      position: relative;
+    }
+
+    .car-photo-frame-inner img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder-text {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.6);
+      color: #e5e7eb;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    /* Ivy – princess theme */
+    .side-ivy {
+      background: linear-gradient(135deg, #fdf2ff, #f9a8d4);
+      color: #4b1144;
+    }
+
+    .side-ivy h1 {
+      font-size: 28px;
+      color: #be185d;
+      text-shadow: 0 1px 3px rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+
+    .side-ivy h2 {
+      font-size: 20px;
+      color: #6b21a8;
+      margin-bottom: 14px;
+    }
+
+    .side-ivy p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .princess-tagline {
+      font-size: 15px;
+      font-weight: 600;
+      color: #7f1d1d;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .crown-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.85);
+      border-radius: 999px;
+      border: 2px solid #f97316;
+      padding: 6px 14px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .ivy-photo-frame {
+      margin-top: 12px;
+      border-radius: 14px;
+      border: 3px dashed #ec4899;
+      padding: 6px;
+      background: rgba(255,255,255,0.7);
+    }
+
+    .ivy-photo-frame-inner {
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fdf2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      position: relative;
+    }
+
+    .ivy-photo-frame-inner img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    .from-message {
+      margin-top: 18px;
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .from-message span {
+      font-weight: 700;
+      color: #9333ea;
+    }
+
+    /* Footer note */
+    .footer-note {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+      .card-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+    <!-- Gray - Car side -->
+    <div class="side side-gray">
+      <div>
+        <h1>🏎️ Happy 5th Birthday, Gray!</h1>
+        <h2>Start your engines, birthday boy!</h2>
+        <p class="car-tagline">
+          Today, you’re not just turning 5 — you’re the fastest racer on the birthday track! 💨
+        </p>
+        <p>
+          May your day be full of <strong>speedy cars, loud laughter,</strong> and
+          <strong>big dreams</strong>. Wherever you go, may your little heart always
+          race with joy, curiosity, and courage.
+        </p>
+        <p>
+          Keep shining, keep driving, and keep being the awesome, fun boy you are.
+          The world is your racetrack, Gray! 🏁
+        </p>
+
+        <div class="badge">
+          #1 Birthday Racer · 5 Years Old · Vroom Vroom! 🚗
+        </div>
+
+        <div class="car-photo-frame">
+          <div class="car-photo-frame-inner">
+            <!-- Replace "car-photo.jpg" with your own picture file for Gray -->
+    
+            <img src="WhatsApp Image 2025-11-29 at 13.08.10_3819d69a.jpg" alt="Gray car themed photo" width =200px>
+            <div class="grays side">Place Gray's Photo Here</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-note">
+        Tip: After opening this file in your browser, press <strong>Ctrl + P</strong> to print.
+      </div>
+    </div>
+
+    <!-- Ivy - Princess side -->
+    <div class="side side-ivy">
+      <div>
+        <h1>👑 Happy 11th Birthday, Ivy!</h1>
+        <h2>Our brilliant, beautiful princess</h2>
+        <p class="princess-tagline">
+          Today, the kingdom sparkles a little brighter because it’s your day. ✨
+        </p>
+        <p>
+          Ivy, you are a princess not just because of your beauty, but because of your
+          <strong>kind heart, smart mind, and gentle courage.</strong>
+          As you turn 11, may your dreams grow bigger, your smile grow brighter,
+          and your path be filled with favour and grace.
+        </p>
+        <p>
+          May you always remember how deeply you are loved, treasured, and celebrated.
+          The world is better and softer because you are in it. 💖
+        </p>
+
+        <div class="crown-badge">
+          Birthday Princess · 11 Years Fabulous 🎀
+        </div>
+
+        <div class="ivy-photo-frame">
+          <div class="ivy-photo-frame-inner">
+            <!-- Replace "ivy-photo.jpg" with your own picture file for Ivy -->
+            <img src="WhatsApp Image 2025-11-29 at 13.06.17_d3885898.jpg" alt="Ivy princess themed photo" width =200px>
+            <div class="photo-placeholder-text">Place Ivy's Photo Here</div>
+          </div>
+        </div>
+      </div>
+      <div class="from-message">
+        With all our love,  
+        <span>from Maggy to Ivy & Gray 💗</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
